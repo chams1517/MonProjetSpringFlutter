@@ -28,7 +28,7 @@ class Utilisateur {
     );
   }
 
-  /// Utilisé pour créer/modifier un utilisateur (le mot de passe est géré à part)
+ 
   Map<String, dynamic> toJson({String? motDePasse}) {
     final map = <String, dynamic>{
       'nom': nom,
