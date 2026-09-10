@@ -38,11 +38,6 @@ public class TpeController {
         return tpeService.getTpeById(id);
     }
 
-    /**
-     * TPE disponibles pour déclarer une panne.
-     * - USER : uniquement les TPE actuellement affectés à SA station
-     * - ADMIN / TECHNICIEN : tous les TPE
-     */
     @GetMapping("/pour-declaration")
     public List<Tpe> getTpePourDeclaration() {
         String email = SecurityContextHolder.getContext().getAuthentication().getName();
