@@ -14,7 +14,7 @@ public class JwtUtil {
             "cette-cle-secrete-doit-faire-au-moins-32-caracteres".getBytes()
     );
 
-    private final long expirationMs = 86400000; // 24 heures
+    private final long expirationMs = 86400000;
 
     public String genererToken(String email) {
         return Jwts.builder()
