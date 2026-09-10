@@ -25,7 +25,7 @@ public class UtilisateurService {
         String motDePasseHache = passwordEncoder.encode(user.getMotDePasse());
         user.setMotDePasse(motDePasseHache);
 
-        // Si une station a été fournie (juste son id), on charge la vraie entité
+       
         if (user.getStation() != null && user.getStation().getId() != null) {
             Station station = stationService.getStationById(user.getStation().getId());
             user.setStation(station);
