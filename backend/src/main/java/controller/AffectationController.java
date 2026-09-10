@@ -21,7 +21,7 @@ public class AffectationController {
         return affectationService.getAllAffectations();
     }
 
-    /** Affectations en cours — pour la liste filtrable et le sélecteur de station en déclarant une panne. */
+    
     @GetMapping("/actives")
     public List<Affectation> getAffectationsActives() {
         return affectationService.getAffectationsActives();
