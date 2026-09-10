@@ -33,8 +33,7 @@ public class AffectationService {
         Tpe tpe = tpeService.getTpeById(tpeId);
         Station station = stationService.getStationById(stationId);
 
-        // Garde-fou métier : on n'affecte pas un TPE en panne ou en réparation à une station.
-        // Il doit d'abord être réparé (retour automatique via InterventionService) ou revenir en stock.
+ 
         if (tpe.getEtat() == EtatTpe.EN_PANNE || tpe.getEtat() == EtatTpe.EN_REPARATION) {
             throw new RuntimeException("Ce TPE est " + tpe.getEtat() + " et ne peut pas être affecté pour le moment");
         }
