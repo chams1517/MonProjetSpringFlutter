@@ -38,7 +38,7 @@ public class PanneService {
     public Panne declarerPanne(Panne panne) {
         Tpe tpe = tpeService.getTpeById(panne.getTpe().getId());
 
-        // Garde-fou : on ne déclare pas une panne sur un TPE déjà en panne, en réparation, ou hors service.
+   
         if (tpe.getEtat() == EtatTpe.EN_PANNE || tpe.getEtat() == EtatTpe.EN_REPARATION || tpe.getEtat() == EtatTpe.HORS_SERVICE) {
             throw new RuntimeException("Ce TPE a déjà une panne en cours (état : " + tpe.getEtat() + ")");
         }
